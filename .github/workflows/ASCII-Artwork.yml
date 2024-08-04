@@ -9,19 +9,20 @@ jobs:
         steps:
         - name: check out repo
           uses: actions/checkout@v4   
+        - name: Execute Shell Script
+          run: ./ASCII-sript.sh
+#         - name: Install the Cowsay Program 
+#           run:  sudo apt-get install cowsay -y
 
-        - name: Install the Cowsay Program 
-          run:  sudo apt-get install cowsay -y
-
-        - name: Generate ASCII Artwork
-          run: cowsay -f dragon "Run for Cover , I am a DRAGON .......RAWAR" >> dragon.txt
-
-        - name: Test the File Exists 
-          run: grep -i "dragon" dragon.txt 
-        - name: Read File 
-          run: cat dragon.txt 
-        - name: List All Repo files 
-          run: ls -altr    
+#         - name: Generate ASCII Artwork
+#           run: cowsay -f dragon "Run for Cover , I am a DRAGON .......RAWAR" >> dragon.txt
+# #
+        # - name: Test the File Exists 
+        #   run: grep -i "dragon" dragon.txt 
+        # - name: Read File 
+        #   run: cat dragon.txt 
+        # - name: List All Repo files 
+        #   run: ls -altr    
 
 
         # - name: List Files
