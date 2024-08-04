@@ -10,7 +10,9 @@ jobs:
         - name: check out repo
           uses: actions/checkout@v4   
         - name: Execute Shell Script
-          run: ./ASCII-sript.sh
+          run: |
+          chmod +x ASCII-sript.sh
+          ./ASCII-sript.sh
 #         - name: Install the Cowsay Program 
 #           run:  sudo apt-get install cowsay -y
 
